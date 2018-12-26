@@ -1,0 +1,44 @@
+<view class='container'>
+  
+  <canvas class="guess  {{canvashide?'hide':''}}" canvas-id="myCanvas" disable-scroll="true" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" bindtouchcancel="touchEnd">
+  </canvas>
+  
+  <view class='tool-container'>
+    <view class='tool-pen'>
+      <text>粗细</text>
+      <view class='tool-pen-width' catchtap='selectPenWidthTap' data-width='2' style="background: {{penColor}};width:10rpx;height:10rpx;border: 8rpx solid {{penWidth==2?'#fff':'#f0f0f0'}}"></view>
+      <view class='tool-pen-width' catchtap='selectPenWidthTap' data-width='4' style="background: {{penColor}};width:20rpx;height:20rpx;border: 8rpx solid {{penWidth==4?'#fff':'#f0f0f0'}}"></view>
+      <view class='tool-pen-width' catchtap='selectPenWidthTap' data-width='7' style="background: {{penColor}};width:30rpx;height:30rpx;border: 8rpx solid {{penWidth==7?'#fff':'#f0f0f0'}}"></view>
+      <view class='tool-pen-width' catchtap='selectPenWidthTap' data-width='12' style="background: {{penColor}};width:40rpx;height:40rpx;border: 8rpx solid {{penWidth==12?'#fff':'#f0f0f0'}}"></view>
+    </view>
+  
+    <view class='tool-other'>
+      <image src='/images/ic_back.png' catchtap='revokeCanvas' mode='aspectFill'></image>
+      <text catchtap='revokeCanvas'></text>
+      <view class='tool-clear' style="background:{{isClear?'#fff':'#f0f0f0'}}" catchtap='clearTap'>
+        <image src='/images/ic_clear.png' mode='aspectFill'></image>   
+      </view>
+      <image src='/images/ic_delete.png' mode='aspectFill' catchtap='deleteTap'></image>
+      <image src='/images/gauss.png' mode='aspectFill' catchtap='gauss'></image>
+      <image src='/images/blackwhite.png' mode='aspectFill' catchtap='blackwhite'></image>
+      <image src='/images/blackwhite.png' mode='aspectFill' catchtap='face'></image>
+    </view>
+  </view>
+  <view class='tool-container' style='margin-top:10rpx'>
+    <text style=' color: #666;font-size: 30rpx;'>颜色</text>
+    <scroll-view class='sro-view' scroll-x='true'>
+      <block wx:for='{{colorList}}' wx:for-item='item' wx:key='index' wx:for-index='index'>
+        <view class='pen-color-container' catchtap='selectPenColorTap' data-index='{{index}}'>
+          <view class='pen-clolor' style='background:{{item}}'></view>
+          <view wx:if='{{colorIndex==index&&!isClear}}' class='pen-color-selected' style='background:{{item}}'></view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <text class='more-color'>左划更多颜色</text>
+  
+  <text class='drawingimage' bindtap='drawimage'>导入图片</text>
+  <text class='clear' catchtap='confirmTap'>完成</text>
+  <menu class='menu'  style=" top:{{top}}px;left:{{left}}px;margin: 10% 0rpx 0rpx 0%;" bindtouchstart="setTouchStart"  bindtouchmove="setTouchMove"  bindmenuItemClick="menuItemClick" mainmodel="{{mainmodel}}" menulist ="{{menulist}}" ></menu>
+  
+</view>

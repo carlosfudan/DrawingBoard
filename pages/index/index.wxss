@@ -1,0 +1,228 @@
+
+page {
+  background: #f0f0f0;
+}
+
+.clears {
+  clear:both;
+}
+
+.title {
+  width: 710rpx;
+  align-items: center;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.key-container {
+  
+  align-items: center;
+  display: flex;
+}
+
+.key {
+  color: #333;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.change {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  background: #ea4b2a;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 50%;
+  width: 50rpx;
+  height: 50rpx;
+  color: #fff;
+}
+
+.guess,.input_content {
+  background: #fff;
+  width: 750rpx;
+  height: 700rpx;
+  z-index: -1;
+}
+
+.input_content .box {
+  width: 85%;
+  position:relative;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  color:#888;
+  font-size:15px;
+}
+
+.input_content .text {
+  height: 25px;
+  line-height: 25px;
+}
+.input_content input {
+  float: none;
+  border: 1px solid #000;
+  color: #333;
+  height: 40px;
+  box-shadow:4px 4px 2px #efefef;
+  padding-left:15px;
+}
+
+.input_content .button {
+  margin-top: 20px;
+  font-size: 15px;
+}
+.input_content .button button {
+  width: 45%;
+  font-size: 15px;
+}
+.input_content .notice {
+  margin-top:20px;
+  text-align:center;
+}
+
+.tool-container {
+  width: 710rpx;
+  padding-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tool-pen {
+  align-items: center;
+  display: flex;
+}
+
+.tool-pen text {
+  color: #666;
+  font-size: 30rpx;
+}
+
+.tool-pen-width {
+  border: 8rpx solid #fff;
+  margin-left: 15rpx;
+  background: #ea4b2a;
+  border-radius: 50%;
+}
+
+.tool-other {
+  align-items: center;
+  display: flex;
+}
+
+.tool-other image {
+  margin-left: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.tool-other text {
+  margin-left: 5rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.tool-clear {
+  border-radius: 8rpx;
+  padding: 5rpx;
+  margin-left: 20rpx;
+  align-items: center;
+  display: flex;
+}
+
+.tool-clear image {
+  margin-left: 0rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.tool-clear text {
+  margin-left: 5rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.sro-view {
+  overflow: auto;
+  width: 640rpx;
+  height: 60rpx;
+  display: flex;
+  white-space: nowrap;
+}
+
+.pen-color-container {
+  width: 50rpx;
+  height: 60rpx;
+ 
+  display: inline-flex;
+  flex-direction: column;
+  white-space: normal;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.pen-clolor {
+  width: 50rpx;
+  height: 50rpx;
+  white-space: normal;
+}
+
+.pen-color-selected {
+  margin-top: 5rpx;
+  width: 50rpx;
+  height: 5rpx;
+}
+
+.more-color {
+  padding-right: 8rpx;
+  font-size: 20rpx;
+  color: #888;
+  align-self: flex-end;
+}
+
+.tool-color {
+  margin-left: 240rpx;
+  background: #f44;
+  border-radius: 50%;
+  width: 70rpx;
+  height: 70rpx;
+  display: flex;
+}
+
+.clear {
+  margin-top: 40rpx;
+  width: 650rpx;
+  height: 80rpx;
+  background: #ea4b2a;
+  color: white;
+  font-size: 28rpx;
+  border-radius: 8rpx;
+  line-height: 80rpx;
+  text-align: center;
+  align-self: center;
+}
+.drawingimage{
+  margin-top: 40rpx;
+  width: 650rpx;
+  height: 80rpx;
+  background: #2aea2a;
+  color: white;
+  font-size: 28rpx;
+  border-radius: 8rpx;
+  line-height: 80rpx;
+  text-align: center;
+  align-self: center;
+}
+.hide {
+  display: none
+}
+.show {
+  display: block
+}
+.menu{
+  z-index: 0;
+  position: fixed;
+}
